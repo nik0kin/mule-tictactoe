@@ -1,0 +1,104 @@
+{
+  "name" : "TicTacToe",
+  "turnSubmitStyle" : "roundRobin",
+
+  "staticBoardSettings" : {
+    "boardStyle" : "linear"
+  },
+
+  "gameSettings" : {
+    "playerLimit" : 2,
+    "customBoardSettings" : {
+    }
+  },
+
+  "rules" : {
+    "spaces" : [
+      {
+        "className": "RegularSpace",
+        "spots": 1,
+        "attributes": {
+        }
+      }
+    ],
+
+    "pieces" : [
+      {
+        "className": "xo"
+      }
+    ],
+
+    "board" : [
+      {
+        "id": "topLeft",
+        "class": "RegularSpace",
+        "edges" : [
+        ]
+      },
+      {
+        "id": "topMiddle",
+        "class": "RegularSpace",
+        "edges" : [
+          {"id": "topLeft", "lineAngle": "-"},
+          {"id": "topRight", "lineAngle": "-"}
+        ]
+      },
+      {
+        "id": "topRight",
+        "class": "RegularSpace",
+        "edges" : [
+        ]
+      },
+      {
+        "id": "middleLeft",
+        "class": "RegularSpace",
+        "edges" : [
+          {"id": "topLeft", "lineAngle": "|"},
+          {"id": "bottomLeft", "lineAngle": "|"}
+        ]
+      },
+      {
+        "id": "middleMiddle",
+        "class": "RegularSpace",
+        "edges" : [
+          {"id": "middleLeft", "lineAngle": "-"},
+          {"id": "middleRight", "lineAngle": "-"},
+          {"id": "topMiddle", "lineAngle": "|"},
+          {"id": "bottomMiddle", "lineAngle": "|"},
+          {"id": "topRight", "lineAngle": "/"},
+          {"id": "bottomLeft", "lineAngle": "/"},
+          {"id": "topLeft", "lineAngle": "\\"},
+          {"id": "bottomRight", "lineAngle": "\\"}
+        ]
+      },
+      {
+        "id": "middleRight",
+        "class": "RegularSpace",
+        "edges" : [
+          {"id": "topRight", "lineAngle": "|"},
+          {"id": "bottomRight", "lineAngle": "|"}
+        ]
+      },
+      {
+        "id": "bottomLeft",
+        "class": "RegularSpace",
+        "edges" : [
+        ]
+      },
+      {
+        "id": "bottomMiddle",
+        "class": "RegularSpace",
+        "edges" : [
+          {"id": "bottomLeft", "lineAngle": "-"},
+          {"id": "bottomRight", "lineAngle": "-"}
+        ]
+      },
+      {
+        "id": "bottomRight",
+        "class": "RegularSpace",
+        "edges" : [
+        ]
+      }
+    ]
+  }
+}
