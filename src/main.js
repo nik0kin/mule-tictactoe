@@ -3,7 +3,7 @@
  * http://stemkoski.github.io/Three.js/#mouse-click
  */
 
-define(['tttRenderer', "../mule-js-sdk/sdk", "../dumbLib"], function (tttRenderer, sdk, dumbLib) {
+define(['tttRenderer', 'mule-sdk'], function (tttRenderer, sdk) {
   var SDK = sdk('../../'),
     Spinal = SDK.Spinal();
 
