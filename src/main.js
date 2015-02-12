@@ -124,7 +124,7 @@ define(['tttRenderer', 'mule-sdk'], function (tttRenderer, sdk) {
         var _class = (userPlayerRel === 'p1') ? 'O' : 'X';
         tttRenderer.placePiece({x: space[0], y: space[1]}, _class);
       })
-      .fail(function (err) {
+      .catch(function (err) {
         alert(JSON.stringify(err));
       });
   };
